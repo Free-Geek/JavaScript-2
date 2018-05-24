@@ -27,9 +27,9 @@
 	* Functions
 	* Loops
 * Don't worry if you're not an expert in these, but hopefully they sound familiar
-* We'll be using a free, online tool called [repl.it](https://repl.it/languages/javascript) to run our code. On the left is a place to write code and on the right is the __*console*__ which will show us the output of our programs.
+* We'll be using a free, online tool called [repl.it](https://repl.it/languages/javascript) to run our code.  On the left is a place to write code and on the right is the __*console*__ which will show us the output of our programs.
 * Something we'll be using pretty regularly is `console.log()` - it looks pretty fancy, but all it does is print what's put in the parenthesis to the console.
-* JavaScript is case sensitive and cares about punctuation. `heyThere`, `HeyThere`, `hey_there`, and `Hey_There` are all different to JavaScript.
+* JavaScript is case sensitive and cares about punctuation.  `heyThere`, `HeyThere`, `hey_there`, and `Hey_There` are all different to JavaScript.
 * Comments are great to add notes to code. You can tell other programmers how to use your programs or even remind yourself what you were thinking when your wrote the code initially. To add a comment, you'll start a line with `//` and everything after that on the same line with be a comment.
 
 ``` javascript
@@ -39,7 +39,7 @@ console.log("Hello World!");
 ```
 
 ## Overview
-Today we'll be looking at two important data types in Javascript, __*Arrays*__ and __*Objects*__.  They're both considered *composite* data types because they're made up of other data types.  Just like the other data types we've learned about, these two have analogues in most other programming languages.
+Today we'll be looking at two important data types in Javascript, __*Arrays*__ and __*Objects*__.   They're both considered *composite* data types because they're made up of other data types.  Just like the other data types we've learned about, these two have analogues in most other programming languages.
 
 
 Cool, let's get down to it!
@@ -173,12 +173,18 @@ __Activity #2:__
 Let's keep going -- make a couple more actor objects and put them inside of an array.  Iterate over (loop through) this array and console.log out their names.
 
 
+__Activity #3:__
+I'll provide you with an array of objects representing users in a fictional system.  Iterate over all of the users and filter the list so we end up with array of only the admins in our system.
 
 
 ## Additional Resources
 
 * [Free Code Camp](https://www.freecodecamp.com/) is a free, online program for learning HTML, CSS, and JavaScript (the three technologies you need to know to make custom websites).
 * [Codecademy](https://www.codecademy.com/learn) has free programming courses in several programming languages - including a bunch of courses in JavaScript.
-* [Khan Academy](https://www.khanacademy.org/computing/computer-programming) has a ton of free resources to help you learn to be a programmer.
+* [Khan Academy](https://www.khanacademy.org/computing/computer-programming) has a ton of free resources to help you learn to be a better programmer.
 * [Code Wars](https://www.codewars.com) is a great way to increase your JavaScript skills once you've completed a more in depth JavaScript course. You learn to program by solving programming puzzles and they have puzzles for all levels of programmers!
+* [CodeSchool](https://www.codeschool.com/learn/javascript) is a paid site similar to Codeacademy that has interactive practice.
 * [Meetups](http://www.meetup.com/) are a great way to meet people in the community and learn in-person, asking questions or seeing what other people are learning and working on.
+* [Youtube](https://www.youtube.com/results?search_query=introduction+to+javascript) is great if you're a visual learner like myself.
+* Google!  Professional developers google things all the time!
+* [Phaser](https://phaser.io/) is a tool for making browser games using JavaScript.  If you're interested in making visual games and have a good grasp on the fundamentals of the language, this is a great library!
