@@ -74,7 +74,7 @@ console.log(breakfast[0]);
 
 __Activity:__
 
-Make an array strings where the strings are different animal sounds.  I'll then ask you how to access the array to get certain sounds out of it.
+Make an array of strings where the strings are different animal sounds (e.g. "moooooo").  Then we'll practice accessing the array to get certain sounds out of it.
 
 ### The Array Prototype
 You can think of a *prototype* in Javascript as a blueprint for different data types.  What this means is each data type (arrays in this example) have certain properties and functions (also known as "methods") available to them.
@@ -87,16 +87,17 @@ You can think of a *prototype* in Javascript as a blueprint for different data t
 	* `const reversedBreakfast = breakfast.reverse()`
 	* `console.log(reversedBreakfast);` ==> `["OJ", "croissant", "coffee"]`
 
-There are lots more, see the [MDN documentation](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/prototype) for more examples.
+There are lots more; see the [MDN documentation](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/prototype) for more examples.
 
 __Activity #1:__
 
-Knowing what you know about accessing array elements and the `length` property, what's a surefire way to get the *last* element of an array?
+Knowing what you know about accessing array elements and the `length` property, what's a surefire way to access the *last* element of an array?
 
 
 __Activity #2:__
 
 Starting with an array `[1, 2, 3]` and applying some of what we just learned, how could I get an array `[10, 3, 2, 1]`?
+
 
 
 ### The String Prototype
@@ -132,19 +133,19 @@ That's it.  But let's make it more interesting by adding a `property` which you 
 
 ``` javascript
 const myDog = {
-	paws: 4,
-    sound: "woof woof"
+  paws: 4,
+  sound: "woof woof"
 };
 ```
 
 When we add a function as a property, it's called a *method*:
 ``` javascript
 const myDog = {
-	paws: 4,
-    sound: "woof woof",
-    sayHello: function() {
-    	console.log("Woof woof!");
-    }
+  paws: 4,
+  sound: "woof woof",
+  sayHello: function() {
+    console.log("Woof woof!");
+  }
 };
 ```
 
@@ -157,7 +158,7 @@ So we have our object, but how do we access its values?  There are two ways:
  2. Bracket Notation
 	* `myDog["paws"]` ==> `4`
 
-Both do the same thing but Dot Notation is easier to read and more common. The advantage of Bracket Notation is that it allows us to use strings as keys.
+Both do the same thing but Dot Notation is easier to read and more common. The advantage of Bracket Notation is that it allows us to use strings (and therefore, variables) as keys.
 * ✔ => `myDog["favorite toy"] = "squeaky mermaid squirrel";`
 * ✖ => `myDog.favorite toy = "squeaky mermaid squirrel";` ==> this will throw an error
 * More info about the differences and use cases [here](https://codeburst.io/javascript-quickie-dot-notation-vs-bracket-notation-333641c0f781).
@@ -168,13 +169,31 @@ __Activity #1:__
 Let's start off by making a simple object with at least 3 properties representing qualities of your favorite actor. You can choose any properties you want but `name`, `age`, or `films` would be a good place to start.
 
 
+
 __Activity #2:__
 
 Let's keep going -- make a couple more actor objects and put them inside of an array.  Iterate over (loop through) this array and console.log out their names.
 
 
+
 __Activity #3:__
 I'll provide you with an array of objects representing users in a fictional system.  Iterate over all of the users and filter the list so we end up with array of only the admins in our system.
+
+
+## Additional Activities (Advanced)
+
+__Bonus Activity #1:__
+
+A slug in web development refers to the hyphen-separated text you see in a URL, for example in the URL `www.hello.com/greetings/it-is-nice-to-meet-you` the slug is `it-is-nice-to-meet-you`.  Write a "de-slugify" function that takes in a slug and does its best to return a human readable string.
+
+
+__Bonus Activity #2:__
+Modify the String prototype itself to create a method that repeats a string `x` amount of times, where `x` is a positive number. [(Answer here)](https://www.sitepoint.com/5-typical-javascript-interview-exercises/)
+
+
+__Bonus Activity #3:__
+Using the `filter` method on the Array prototype, filter out all odd values from the following array: `[414, 19, 54, 2913, 0, 882, 124]`.  Use the MDN Documentation for examples on how this method works.
+
 
 
 ## Additional Resources
