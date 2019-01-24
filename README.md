@@ -50,8 +50,8 @@ Cool, let's get down to it!
 __Rapid fire questions!__
 * What's a variable?
 * What are three kinds of data types? Come up with an example for each one.
-* What's a conditional?
-* What's a function and why is it useful?
+* What's an "if statement"?
+* What's a function and why are they useful?
 * What's a loop?  What types of loops can you think of?
 
 __Activity__:
@@ -65,16 +65,24 @@ Arrays are container-like values that can hold other values. The values inside a
 const breakfast = ["coffee", "croissant"];
 ```
 
-To access one of the elements inside an array, you’ll need to use the brackets and a number like this: myArray[3]. __Important__: Javascript arrays begin at 0, so the first element will always be inside [0]:
+To access one of the elements inside an array, you’ll need to use the brackets and a number like this: myArray[3].  This number is called an `index` and it's like an address to access elements in your array. __Important__: Javascript arrays begin at 0, so the first element will always be inside [0]:
 
 ``` javascript
 console.log(breakfast[0]);
 // --> "coffee"
 ```
 
+And there's nothing stopping you from using a number variable as your index:
+
+``` javascript
+const myIndex = 1;
+console.log(breakfast[myIndex]);
+// --> "croissant"
+```
+
 __Activity:__
 
-Make an array of strings where the strings are different animal sounds (e.g. "moooooo").  Then we'll practice accessing the array to get certain sounds out of it.
+Make an array of strings where the strings are your grocery list (e.g. "eggs").  Then we'll practice accessing the array to get certain items out of it.
 
 ### The Array Prototype
 You can think of a *prototype* in Javascript as a blueprint for different data types.  What this means is each data type (arrays in this example) have certain properties and functions (also known as "methods") available to them.
@@ -89,15 +97,23 @@ You can think of a *prototype* in Javascript as a blueprint for different data t
 
 There are lots more; see the [MDN documentation](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/prototype) for more examples.
 
+
 __Activity #1:__
 
-Knowing what you know about accessing array elements and the `length` property, what's a surefire way to access the *last* element of an array?
+Starting with an array `[1, 2, 3]` and applying some of what we just learned, how could I get an array `[10, 3, 2, 1]`?
 
 
 __Activity #2:__
 
-Starting with an array `[1, 2, 3]` and applying some of what we just learned, how could I get an array `[10, 3, 2, 1]`?
+Knowing what you know about accessing array elements and the `length` property, what's a surefire way to access the *last* element of an array?
 
+
+__Activity #3:__
+Using a loop (e.g. a for-loop), iterate over your grocery list and log each item individually.
+
+
+__Activity #4:__
+Building on your answer from #3, how could we filter the array to only contain elements that start with the letter "C"?
 
 
 ### The String Prototype
@@ -116,8 +132,8 @@ Just like the Array prototype, there is a String prototype.  There's some overla
 
 To learn more about the String prototype methods, see the [MDN documentation](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/prototype).
 
-__Activity:__
-Write a function that takes in a sentence and returns the number of words in that sentence. Bonus activity if you finish quick: try modifying the function to only return the number of words that start with a vowel.
+__Activity #1:__
+Write a function that takes in a sentence as a string and returns an array of the words in that sentence. Bonus activity if you finish: try modifying the function to return the number of words in the sentence.
 
 
 
@@ -138,7 +154,7 @@ const myDog = {
 };
 ```
 
-When we add a function as a property, it's called a *method*:
+Functions can also be properties.  When we do this, the function is called a *method*:
 ``` javascript
 const myDog = {
   paws: 4,
@@ -150,6 +166,12 @@ const myDog = {
 ```
 
 And there's nothing stopping us from having properties that are arrays or even other objects (often referred to as *nested objects*).  Pretty cool huh?  Let's practice!
+
+
+__Activity #1:__
+
+Let's start off by making a simple object with at least 3 properties representing qualities of your favorite actor or musician. You can choose any properties you want but `name`, `age`, or `films` would be a good place to start.
+
 
 ### Accessing Object Properties
 So we have our object, but how do we access its values?  There are two ways:
@@ -164,35 +186,28 @@ Both do the same thing but Dot Notation is easier to read and more common. The a
 * More info about the differences and use cases [here](https://codeburst.io/javascript-quickie-dot-notation-vs-bracket-notation-333641c0f781).
 
 
-__Activity #1:__
-
-Let's start off by making a simple object with at least 3 properties representing qualities of your favorite actor. You can choose any properties you want but `name`, `age`, or `films` would be a good place to start.
-
-
-
 __Activity #2:__
 
 Let's keep going -- make a couple more actor objects and put them inside of an array.  Iterate over (loop through) this array and console.log out their names.
-
 
 
 __Activity #3:__
 I'll provide you with an array of objects representing users in a fictional system.  Iterate over all of the users and filter the list so we end up with array of only the admins in our system.
 
 
-## Additional Activities (Advanced)
+## Additional Activities (Advanced!)
 
 __Bonus Activity #1:__
 
-A slug in web development refers to the hyphen-separated text you see in a URL, for example in the URL `www.hello.com/greetings/it-is-nice-to-meet-you` the slug is `it-is-nice-to-meet-you`.  Write a "de-slugify" function that takes in a slug and does its best to return a human readable string.
+A slug in web development refers to the hyphen-separated text you see in a URL, for example in the URL `www.hello.com/greetings/it-is-nice-to-meet-you` the slug is `it-is-nice-to-meet-you`.  Write a "de-slugify" function that takes in a slug and does its best to return a human readable string.  Hint: the Array prototype method `split()` is your friend.
 
 
 __Bonus Activity #2:__
-Modify the String prototype itself to create a method that repeats a string `x` amount of times, where `x` is a positive number. [(Answer here)](https://www.sitepoint.com/5-typical-javascript-interview-exercises/)
+Create a function that repeats a string `x` amount of times, where `x` is a positive number.  For example, `repeatify("ha", 3)` returns `"hahaha"`.  Once you've got the function, add it as a method to the String prototype.  [(Answer here)](https://www.sitepoint.com/5-typical-javascript-interview-exercises/)
 
 
 __Bonus Activity #3:__
-Using the `filter` method on the Array prototype, filter out all odd values from the following array: `[414, 19, 54, 2913, 0, 882, 124]`.  Use the MDN Documentation for examples on how this method works.
+Using the `filter` method on the Array prototype [(info here)](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/filter), filter out all negative values from the following array: `[414, -19, 54, -2913, 0, 882, 124, -0.001]`.
 
 
 
